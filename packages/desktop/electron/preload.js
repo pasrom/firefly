@@ -177,6 +177,7 @@ const Electron = {
             }
         })
     },
+    argon2Hash: (password) => ipcRenderer.invoke('argon2-hash', password)
 
 }
 

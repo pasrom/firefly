@@ -163,5 +163,8 @@ module.exports = [
         optimization: {
             nodeEnv: hardcodeNodeEnv ? mode : false,
         },
+        externals: {
+            argon2: 'commonjs argon2'
+        }
     },
 ]

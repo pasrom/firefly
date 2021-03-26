@@ -3,6 +3,7 @@ const { app, dialog, ipcMain, protocol, shell, BrowserWindow, session } = requir
 const path = require('path')
 const os = require('os')
 const Keychain = require('./lib/keychain')
+const Argon2 = require('./lib/argon2')
 const { initMenu, contextMenu } = require('./lib/menu')
 
 /**
@@ -291,9 +292,14 @@ ipcMain.handle('diagnostics', (_e) => {
     return diagnostics
 })
 
-// Os
+// OS
 ipcMain.handle('get-os', (_e) => {
     return process.platform
+})
+
+// Argon2 hashing
+ipcMain.handle('argon2-hash', (_e, password) => {
+    return Argon2.hash(password)
 })
 
 /**

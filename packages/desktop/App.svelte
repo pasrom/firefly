@@ -53,6 +53,8 @@
 
         await fetchMarketData()
         await pollNetworkStatus()
+        console.log(await Electron.argon2Hash('hello'));
+        
 
         // @ts-ignore: This value is replaced by Webpack DefinePlugin
         if (!devMode) {

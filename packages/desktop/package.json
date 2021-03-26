@@ -18,6 +18,7 @@
         "compile:win": "electron-builder --win --x64"
     },
     "dependencies": {
+        "argon2": "^0.27.1",
         "electron-log": "^4.3.1",
         "electron-updater": "^4.3.5",
         "keytar": "^7.3.0",
